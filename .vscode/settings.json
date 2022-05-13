@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/[Bb]in": true,
+        "**/[Oo]bj": true,
+        "**/lcov.info": true,
+        "**/coverage.cobertura.xml" : true,
+        "**/TestResults" : true
+    },
+    "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj",
+    "workbench.tree.indent": 24,
+    "dotnet-test-explorer.enableTelemetry": false,
+    "editor.formatOnSave": true
+}
