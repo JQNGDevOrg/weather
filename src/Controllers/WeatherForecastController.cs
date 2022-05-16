@@ -30,4 +30,18 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+
+    [HttpPost]
+    [Route("{celcius:int}")]
+    public WeatherForecast Post(int celcius)
+    {
+        _logger.LogDebug($"Number posted : {celcius}");
+
+        return new WeatherForecast
+        {
+            Date = DateTime.Now,
+            TemperatureC = celcius,
+            Summary = Summaries[RandomNumberGenerator.GetInt32(Summaries.Length)]
+        };
+    }
 }
