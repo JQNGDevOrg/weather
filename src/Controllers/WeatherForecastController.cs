@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 
 namespace weather.Controllers;
@@ -24,8 +25,8 @@ public class WeatherForecastController : ControllerBase
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            TemperatureC = RandomNumberGenerator.GetInt32(-20, 32),
+            Summary = Summaries[RandomNumberGenerator.GetInt32(Summaries.Length)]
         })
         .ToArray();
     }
