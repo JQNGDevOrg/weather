@@ -257,3 +257,4 @@ paket-files/
 
 # Custom ignores
 /output
+coverage.*
